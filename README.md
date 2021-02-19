@@ -1,27 +1,24 @@
 <img src="https://docs-assets.developer.apple.com/published/c104c9bff0/841b02dd-b78c-4cad-8da4-700761d34e14.png" width="50" height="50" alt="Apple Wallet Logo" align="left" />
 
 # PassSigner
-
 [![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+[![NPM Downloads][npm-downloads-image]][npm-downloads-url]
 
 Apple Pass Signer for NodeJS
 
 ## Install
-
 ```
 $ npm install passsigner
 ```
 
 ## Get Started
-
 ### Apple's WWDR Certificate
 Apple’s World Wide Developer Relations (WWDR) certificate is available from Apple at [http://developer.apple.com/certificationauthority/AppleWWDRCA.cer](http://developer.apple.com/certificationauthority/AppleWWDRCA.cer).
 
 ### Pass Signing Certificate
 To download your pass signing certificate, do the following:
 
-1. Log into your [Apple Developer Console](https://developer.apple.com/account).
+1. Log into your [Apple Developer Console][apple-developer-console].
 2. In Certificates, Identifiers & Profiles, select Identifiers.
 3. Under Identifiers, select Pass Type IDs.
 4. Click the plus (+) button.
@@ -38,9 +35,7 @@ To download your pass signing certificate, do the following:
 | signCert    | String | Required | Path to Pass Signing Certificate.             |
 | password    | String | Optional | The Password of the Pass Signing Certificate. |
 
-
 ## Usage
-
 ```js
 const PassSigner = require("passsigner")
 
@@ -60,10 +55,10 @@ const signature = passSigner.sign(JSON.stringify(manifest))
 ```
 
 ## License
-
 [MIT](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/passsigner.svg
 [npm-url]: https://npmjs.org/package/passsigner
-[downloads-image]: https://img.shields.io/npm/dm/passsigner.svg
-[downloads-url]: https://npmcharts.com/compare/passsigner?minimal=true
+[npm-downloads-image]: https://img.shields.io/npm/dm/passsigner.svg
+[npm-downloads-url]: https://npmcharts.com/compare/passsigner?minimal=true
+[apple-developer-console]: https://developer.apple.com/account
