@@ -1,0 +1,29 @@
+{
+  "name": "passsigner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihiroshi27/passsigner.git"
+  },
+  "keywords": [
+    "apple",
+    "wallet",
+    "pass",
+    "passkit",
+    "signer"
+  ],
+  "author": "Perayuth Thanyanon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ihiroshi27/passsigner/issues"
+  },
+  "homepage": "https://github.com/ihiroshi27/passsigner#readme",
+  "dependencies": {
+    "node-forge": "^0.10.0"
+  }
+}
