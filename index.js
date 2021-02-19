@@ -11,7 +11,7 @@ class PassSigner {
     const appleWWDRCA = forge.pki.certificateFromAsn1(forge.asn1.fromDer(fs.readFileSync(config.appleWWDRCA, 'binary')))
 
     const p12Asn1 = forge.asn1.fromDer(fs.readFileSync(config.signCert, 'binary'))
-    const p12 = forge.pkcs12.pkcs12FromAsn1(p12Asn1)
+    const p12 = forge.pkcs12.pkcs12FromAsn1(p12Asn1, config.password)
 
     const keyBags = p12.getBags({ bagType: forge.pki.oids.pkcs8ShroudedKeyBag })
     const keyBag = keyBags[forge.pki.oids.pkcs8ShroudedKeyBag][0]
