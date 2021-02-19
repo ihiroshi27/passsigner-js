@@ -1,4 +1,4 @@
-# signer
+# Pass Signer
 
 Apple Pass Signer for NodeJS
 
