@@ -31,6 +31,14 @@ To download your pass signing certificate, do the following:
 8. Download your new certificate. Double click to add this certificate to your Keychain.
 9. Right-click on your certificate, then click Export.
 
+### Options
+| Name        | Type   | Required | Description                                   |
+|-------------|--------|----------|-----------------------------------------------|
+| appleWWDRCA | String | Required | Path to Apple's WWDR Certificate.             |
+| signCert    | String | Required | Path to Pass Signing Certificate.             |
+| password    | String | Optional | The Password of the Pass Signing Certificate. |
+
+
 ## Usage
 
 ```js
