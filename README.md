@@ -13,7 +13,7 @@ $ npm install passsigner
 ## Usage
 
 ```js
-const passsigner = require("passsigner")
+const PassSigner = require("passsigner")
 
 const manifest = {
   "icon.png": "a05b6df8cdc27338f296856e367116b09d5bd63c",
@@ -23,8 +23,9 @@ const manifest = {
   "pass.json": "6923eaca29e9ef3f97dacf9d0a0880efc368df28",
 }
 
-const signature = passsigner.sign(JSON.stringify(manifest), {
+const passSigner = new PassSigner({
   appleWWDRCA: './AppleWWDRCA.cer',
   signCert: './Certificates.p12'
 })
+const signature = passSigner.sign(JSON.stringify(manifest))
 ```
