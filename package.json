@@ -1,7 +1,7 @@
 {
   "name": "passsigner",
   "version": "1.0.0",
-  "description": "",
+  "description": "Apple Pass Signer for NodeJS",
   "main": "index.js",
   "repository": {
     "type": "git",
