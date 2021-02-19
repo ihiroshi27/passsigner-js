@@ -29,3 +29,7 @@ const passSigner = new PassSigner({
 })
 const signature = passSigner.sign(JSON.stringify(manifest))
 ```
+
+## License
+
+[MIT](LICENSE)
