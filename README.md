@@ -2,6 +2,9 @@
 
 # PassSigner
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+
 Apple Pass Signer for NodeJS
 
 ## Install
@@ -33,3 +36,8 @@ const signature = passSigner.sign(JSON.stringify(manifest))
 ## License
 
 [MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/passsigner.svg
+[npm-url]: https://npmjs.org/package/passsigner
+[downloads-image]: https://img.shields.io/npm/dm/passsigner.svg
+[downloads-url]: https://npmcharts.com/compare/passsigner?minimal=true
