@@ -4,8 +4,9 @@ const forge = require('node-forge')
 
 exports.sign = (manifest, config) => {
   if (typeof manifest !== 'string') throw new Error('Invalid parameter: manifest must be string')
-  if (config && typeof config.appleWWDRCA !== 'string') throw new Error('Missing required config: appleWWDRCA')
-  if (config && typeof config.signCert !== 'string') throw new Error('Missing required config: signCert')
+  if (typeof config !== 'object') throw new Error('Missing config')
+  if (typeof config.appleWWDRCA !== 'string') throw new Error('Missing required config: appleWWDRCA')
+  if (typeof config.signCert !== 'string') throw new Error('Missing required config: signCert')
 
   const appleWWDRCA = forge.pki.certificateFromAsn1(forge.asn1.fromDer(fs.readFileSync(config.appleWWDRCA, 'binary')))
 
