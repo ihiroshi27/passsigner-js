@@ -13,6 +13,24 @@ Apple Pass Signer for NodeJS
 $ npm install passsigner
 ```
 
+## Get Started
+
+### Apple's WWDR Certificate
+Apple’s World Wide Developer Relations (WWDR) certificate is available from Apple at [http://developer.apple.com/certificationauthority/AppleWWDRCA.cer](http://developer.apple.com/certificationauthority/AppleWWDRCA.cer).
+
+### Pass Signing Certificate
+To download your pass signing certificate, do the following:
+
+1. Log into your [Apple Developer Console](https://developer.apple.com/account).
+2. In Certificates, Identifiers & Profiles, select Identifiers.
+3. Under Identifiers, select Pass Type IDs.
+4. Click the plus (+) button.
+5. Enter the description and pass type identifier, and click Submit.
+6. Select the pass type identifier, then click Edit.
+7. Click the Create Certificate button, then follow the instructions to create a pass signing certificate.
+8. Download your new certificate. Double click to add this certificate to your Keychain.
+9. Right-click on your certificate, then click Export.
+
 ## Usage
 
 ```js
