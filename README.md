@@ -23,7 +23,7 @@ const manifest = {
   "pass.json": "6923eaca29e9ef3f97dacf9d0a0880efc368df28",
 }
 
-const signature = passsigner.sign(manifest, {
+const signature = passsigner.sign(JSON.stringify(manifest), {
   appleWWDRCA: './AppleWWDRCA.cer',
   signCert: './Certificates.p12'
 })
