@@ -1,6 +1,6 @@
 <img src="https://docs-assets.developer.apple.com/published/c104c9bff0/841b02dd-b78c-4cad-8da4-700761d34e14.png" width="50" height="50" alt="Apple Wallet Logo" align="left" />
 
-# Pass Signer
+# PassSigner
 
 Apple Pass Signer for NodeJS
 
