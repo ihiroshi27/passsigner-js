@@ -3,6 +3,13 @@ const fs = require('fs')
 const forge = require('node-forge')
 
 class PassSigner {
+  /**
+   * 
+   * @param {object} config
+   * @param {string} config.appleWWDRCA Path to Apple's WWDR Certificate.
+   * @param {string} config.signCert Path to Pass Signing Certificate.
+   * @param {string} [config.password] The Password of the Pass Signing Certificate.
+   */
   constructor (config) {
     if (typeof config !== 'object') throw new Error('Missing config')
     if (typeof config.appleWWDRCA !== 'string') throw new Error('Missing required config: appleWWDRCA')
@@ -24,6 +31,10 @@ class PassSigner {
     this.signCert = certBag.cert
   }
 
+  /**
+   * 
+   * @param {string} manifest
+   */
   sign (manifest) {
     if (typeof manifest !== 'string') throw new Error('Invalid parameter: manifest must be string')
 
