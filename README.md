@@ -8,7 +8,7 @@ Apple Pass Signer for NodeJS
 
 ## Install
 ```
-$ npm install passsigner
+$ npm install passsigner-js
 ```
 
 ## Get Started
@@ -37,7 +37,7 @@ To download your pass signing certificate, do the following:
 
 ## Usage
 ```js
-const PassSigner = require("passsigner")
+const PassSigner = require("passsigner-js")
 
 const manifest = {
   "icon.png": "a05b6df8cdc27338f296856e367116b09d5bd63c",
@@ -57,8 +57,8 @@ const signature = passSigner.sign(JSON.stringify(manifest))
 ## License
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/passsigner.svg
-[npm-url]: https://npmjs.org/package/passsigner
-[npm-downloads-image]: https://img.shields.io/npm/dm/passsigner.svg
-[npm-downloads-url]: https://npmcharts.com/compare/passsigner?minimal=true
+[npm-image]: https://img.shields.io/npm/v/passsigner-js.svg
+[npm-url]: https://npmjs.org/package/passsigner-js
+[npm-downloads-image]: https://img.shields.io/npm/dm/passsigner-js.svg
+[npm-downloads-url]: https://npmcharts.com/compare/passsigner-js?minimal=true
 [apple-developer-console]: https://developer.apple.com/account
