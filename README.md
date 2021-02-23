@@ -4,7 +4,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
 
-Apple Pass Signer for NodeJS
+Apple Pass Signer for Node.js
 
 ## Install
 ```
