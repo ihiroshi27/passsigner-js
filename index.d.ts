@@ -1,5 +1,9 @@
 declare class PassSigner {
-  constructor (config: { appleWWDRCA: string, signCert: string, password?: string })
+  constructor (config: {
+    appleWWDRCA: string | Buffer,
+    signCert: string | Buffer,
+    password?: string
+  })
   sign (manifest: string): Buffer
 }
 

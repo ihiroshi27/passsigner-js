@@ -29,11 +29,11 @@ To download your pass signing certificate, do the following:
 9. Right-click on your certificate, then click Export.
 
 ## Options
-| Name        | Type   | Required | Description                                   |
-|-------------|--------|----------|-----------------------------------------------|
-| appleWWDRCA | String | Required | Path to Apple's WWDR Certificate.             |
-| signCert    | String | Required | Path to Pass Signing Certificate.             |
-| password    | String | Optional | The Password of the Pass Signing Certificate. |
+| Name        | Type             | Required | Description                                   |
+|-------------|------------------|----------|-----------------------------------------------|
+| appleWWDRCA | Buffer \| String | Required | Buffer or Path of Apple's WWDR Certificate.   |
+| signCert    | Buffer \| String | Required | Buffer or Path of Pass Signing Certificate.   |
+| password    | String           | Optional | The Password of the Pass Signing Certificate. |
 
 ## Usage
 ```js

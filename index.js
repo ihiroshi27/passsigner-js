@@ -6,18 +6,19 @@ class PassSigner {
   /**
    * 
    * @param {object} config
-   * @param {string} config.appleWWDRCA Path to Apple's WWDR Certificate.
-   * @param {string} config.signCert Path to Pass Signing Certificate.
+   * @param {string|Buffer} config.appleWWDRCA Path to Apple's WWDR Certificate.
+   * @param {string|Buffer} config.signCert Path to Pass Signing Certificate.
    * @param {string} [config.password] The Password of the Pass Signing Certificate.
    */
   constructor (config) {
     if (typeof config !== 'object') throw new Error('Missing config')
-    if (typeof config.appleWWDRCA !== 'string') throw new Error('Missing required config: appleWWDRCA')
-    if (typeof config.signCert !== 'string') throw new Error('Missing required config: signCert')
+    if (!Buffer.isBuffer(config.appleWWDRCA) && typeof config.appleWWDRCA !== 'string') throw new Error('Missing or Invalid required config: appleWWDRCA')
+    if (!Buffer.isBuffer(config.signCert) && typeof config.signCert !== 'string') throw new Error('Missing or Invalid required config: signCert')
 
-    const appleWWDRCA = forge.pki.certificateFromAsn1(forge.asn1.fromDer(fs.readFileSync(config.appleWWDRCA, 'binary')))
+    const appleWWDRCAAsn1 = forge.asn1.fromDer(Buffer.isBuffer(config.appleWWDRCA) ? config.appleWWDRCA.toString('binary') : fs.readFileSync(config.appleWWDRCA, 'binary'))
+    const appleWWDRCA = forge.pki.certificateFromAsn1(appleWWDRCAAsn1)
 
-    const p12Asn1 = forge.asn1.fromDer(fs.readFileSync(config.signCert, 'binary'))
+    const p12Asn1 = forge.asn1.fromDer(Buffer.isBuffer(config.signCert) ? config.signCert.toString('binary') : fs.readFileSync(config.signCert, 'binary'))
     const p12 = forge.pkcs12.pkcs12FromAsn1(p12Asn1, config.password)
 
     const keyBags = p12.getBags({ bagType: forge.pki.oids.pkcs8ShroudedKeyBag })
