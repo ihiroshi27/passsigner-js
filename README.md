@@ -44,8 +44,9 @@ const manifest = {
   "icon@2x.png": "e4fda792e9e2f0b043e16006cfea70fffe610e51",
   "logo.png": "284d8cca28de0ebb2ca28ebdf5a8dc11c9e7543c",
   "logo@2x.png": "3343ada60b6b504c9b65a601e8b89a0566d5ca00",
-  "pass.json": "6923eaca29e9ef3f97dacf9d0a0880efc368df28",
+  "pass.json": "6923eaca29e9ef3f97dacf9d0a0880efc368df28"
 }
+// Note: The manifest is a JSON object that contains a dictionary of the SHA1 hashes for each of the source files for the pass.
 
 const passSigner = new PassSigner({
   appleWWDRCA: './AppleWWDRCA.cer',
